@@ -52,9 +52,10 @@ namespace RestaurantManager.Repositories
 
             SqlCommand cmd = new SqlCommand("select * from  Users where Users.email = @email ");
             Guid Id = Guid.NewGuid();
+            dbCon.OpenDbCon();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@email", email);
-            SqlDataReader reader = cmd.ExecuteReader();
+            SqlDataReader reader = dbCon.ExecuteSqlReader(cmd);
 
             while (reader.Read())
             {
@@ -66,7 +67,7 @@ namespace RestaurantManager.Repositories
                 user.SetAccessLevel((int)reader["accessLevel"]);
 
             }
-
+            dbCon.CloseDbCon();
             return user;
         }
 
@@ -83,7 +84,7 @@ namespace RestaurantManager.Repositories
 
             SqlDataReader reader = dbCon.ExecuteSqlReader(cmd);
 
-            if (reader.Read()) { return true; dbCon.CloseDbCon(); }
+            if (reader.Read()) { dbCon.CloseDbCon(); return true;  }
             dbCon.CloseDbCon();
             return false;
         }

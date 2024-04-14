@@ -23,6 +23,14 @@ namespace RestaurantManager.Forms
             InitializeComponent();
 
             loggedUser = user;
+
+            if(loggedUser.GetAccessLevel()<3)
+            {
+                takeTableButton.Visible= false;
+                modifyTableStateButton.Visible= false;
+                stateDropDown.Visible= false;
+                SelectStateLabel.Visible= false;
+            }
         }
 
         private void ReservationsForm_Load(object sender, EventArgs e)

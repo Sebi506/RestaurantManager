@@ -40,11 +40,20 @@ namespace RestaurantManager.Connection
         {
             cmd.Connection = this.connection;
             SqlCommand cmd2 = new SqlCommand(cmd.CommandText, connection);
-
-            cmd2.Parameters.AddWithValue("@email", cmd.Parameters[0].Value);
-            cmd2.Parameters.AddWithValue("@password", cmd.Parameters[1].Value);
+            foreach(SqlParameter cmdParameter in cmd.Parameters)
+            cmd2.Parameters.AddWithValue(cmdParameter.ParameterName.ToString(), cmdParameter.Value);
 
             SqlDataReader reader = cmd2.ExecuteReader();
+
+
+            return reader;
+        }
+
+        public SqlDataReader ExecuteSqlReader(string query)
+        {
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            SqlDataReader reader = cmd.ExecuteReader();
 
 
             return reader;

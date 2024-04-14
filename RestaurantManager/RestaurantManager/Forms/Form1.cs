@@ -36,6 +36,7 @@ namespace RestaurantManager
             if (value)
             {
                 label1.Text = "Login successfull";
+                loggedUser = usersRepository.GetUserByEmail(user.GetEmail(), dbCon);
             }
             else
             {

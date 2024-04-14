@@ -37,10 +37,9 @@
             // 
             // reserveButton
             // 
-            this.reserveButton.Location = new System.Drawing.Point(166, 243);
-            this.reserveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.reserveButton.Location = new System.Drawing.Point(111, 158);
             this.reserveButton.Name = "reserveButton";
-            this.reserveButton.Size = new System.Drawing.Size(172, 35);
+            this.reserveButton.Size = new System.Drawing.Size(115, 23);
             this.reserveButton.TabIndex = 0;
             this.reserveButton.Text = "Reservations";
             this.reserveButton.UseVisualStyleBackColor = true;
@@ -48,10 +47,9 @@
             // 
             // manageRestaurantButton
             // 
-            this.manageRestaurantButton.Location = new System.Drawing.Point(166, 309);
-            this.manageRestaurantButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.manageRestaurantButton.Location = new System.Drawing.Point(111, 261);
             this.manageRestaurantButton.Name = "manageRestaurantButton";
-            this.manageRestaurantButton.Size = new System.Drawing.Size(172, 35);
+            this.manageRestaurantButton.Size = new System.Drawing.Size(115, 23);
             this.manageRestaurantButton.TabIndex = 1;
             this.manageRestaurantButton.Text = "Restaurant Manager";
             this.manageRestaurantButton.UseVisualStyleBackColor = true;
@@ -59,10 +57,9 @@
             // 
             // disconnectButton
             // 
-            this.disconnectButton.Location = new System.Drawing.Point(166, 451);
-            this.disconnectButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.disconnectButton.Location = new System.Drawing.Point(111, 216);
             this.disconnectButton.Name = "disconnectButton";
-            this.disconnectButton.Size = new System.Drawing.Size(172, 35);
+            this.disconnectButton.Size = new System.Drawing.Size(115, 23);
             this.disconnectButton.TabIndex = 2;
             this.disconnectButton.Text = "Disconnect";
             this.disconnectButton.UseVisualStyleBackColor = true;
@@ -70,10 +67,9 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(166, 406);
-            this.loginButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.loginButton.Location = new System.Drawing.Point(111, 187);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(172, 35);
+            this.loginButton.Size = new System.Drawing.Size(115, 23);
             this.loginButton.TabIndex = 3;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -82,22 +78,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(222, 510);
+            this.label1.Location = new System.Drawing.Point(159, 309);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 30);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 4;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 692);
+            this.ClientSize = new System.Drawing.Size(332, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.disconnectButton);
             this.Controls.Add(this.manageRestaurantButton);
             this.Controls.Add(this.reserveButton);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

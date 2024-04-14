@@ -1,0 +1,11 @@
+D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.csproj.AssemblyReference.cache
+D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.Form1.resources
+D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.Forms.LoginForm.resources
+D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.Properties.Resources.resources
+D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.csproj.GenerateResource.cache
+D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.csproj.CoreCompileInputs.cache
+D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\bin\Debug\RestaurantManager.exe.config
+D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\bin\Debug\RestaurantManager.exe
+D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\bin\Debug\RestaurantManager.pdb
+D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.exe
+D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.pdb

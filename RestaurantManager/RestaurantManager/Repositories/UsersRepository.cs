@@ -20,9 +20,9 @@ namespace RestaurantManager.Repositories
             SqlCommand cmd = new SqlCommand("sp_insert");
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@name", user.GetFirstName());
-            cmd.Parameters.AddWithValue("@email", textBox2.Text);
-            cmd.Parameters.AddWithValue("@phone", textBox3.Text);
-            cmd.Parameters.AddWithValue("@address", textBox4.Text);
+            //cmd.Parameters.AddWithValue("@email", textBox2.Text);
+            //cmd.Parameters.AddWithValue("@phone", textBox3.Text);
+            //cmd.Parameters.AddWithValue("@address", textBox4.Text);
 
             throw new NotImplementedException();
         }

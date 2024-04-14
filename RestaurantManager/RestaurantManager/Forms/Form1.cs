@@ -18,6 +18,7 @@ namespace RestaurantManager
     public partial class Form1 : Form
     {
         User loggedUser;
+        DatabaseConnection dbCon;
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace RestaurantManager
             InitializeComponent();
             loggedUser = user;
 
-            DatabaseConnection dbCon = new DatabaseConnection();
+            dbCon = DatabaseConnection.Instance;
 
             UsersRepository usersRepository = new UsersRepository();
 
@@ -64,7 +65,7 @@ namespace RestaurantManager
         private void reserveButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form loginForm = new ReservationsForm(loggedUser) ;
+            Form loginForm = new ReservationsForm(loggedUser,dbCon) ;
             loginForm.ShowDialog();
         }
     }

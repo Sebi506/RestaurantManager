@@ -11,11 +11,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace RestaurantManager.Connection
 {
-    public class DatabaseConnection
+    public sealed class DatabaseConnection
     {
         string connectionString;
         SqlConnection connection;
 
+        private static DatabaseConnection instance= null;
 
         public DatabaseConnection()
         {
@@ -25,9 +26,31 @@ namespace RestaurantManager.Connection
 
         }
 
+        public static DatabaseConnection Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DatabaseConnection();
+                }
+                return instance;
+            }
+        }
 
         public void ExecuteSqlCommand(SqlCommand cmd)
         {
+
+            connection.Open();
+
+            cmd.ExecuteNonQuery();
+
+            connection.Close();
+        }
+
+        public void ExecuteSqlCommand(string query)
+        {
+            SqlCommand cmd = new SqlCommand(query, connection);
 
             connection.Open();
 

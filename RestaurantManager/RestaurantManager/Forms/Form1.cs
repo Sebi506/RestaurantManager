@@ -16,5 +16,15 @@ namespace RestaurantManager
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void disconnectButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

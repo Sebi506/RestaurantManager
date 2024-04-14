@@ -8,5 +8,15 @@ namespace RestaurantManager
 {
     internal class Table
     {
+        string tableName { get; set; }
+        int state { get; set; }
+        int tableCapacity { get; set; }
+
+        public Table()
+        {
+
+        }
+
+        
     }
 }

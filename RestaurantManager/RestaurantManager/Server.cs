@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RestaurantManager
 {
-    internal class Server
+    internal class Server : User
     {
+        public Server() { }
     }
 }

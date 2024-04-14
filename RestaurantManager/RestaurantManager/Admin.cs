@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace RestaurantManager
 {
-    internal class Admin
+    internal class Admin : User
     {
+
+        public Admin() { }
+
+        public void ModifyAccessLevel(User user, int accesslevel)
+        {
+        
+            //find user in db, update accesslevel
+
+        }
+
+        public void UpdateRestaurant() { } 
     }
 }

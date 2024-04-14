@@ -17,14 +17,18 @@ namespace RestaurantManager.Repositories
 
         void IRepository<User>.Add(User user, DatabaseConnection dbCon)
         {
-            SqlCommand cmd = new SqlCommand("sp_insert");
+            SqlCommand cmd = new SqlCommand("insert into Users values(@id,@firstName,@lastName,@email,@password,@accesslevel) ");
+            Guid Id= Guid.NewGuid();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@name", user.GetFirstName());
-            //cmd.Parameters.AddWithValue("@email", textBox2.Text);
-            //cmd.Parameters.AddWithValue("@phone", textBox3.Text);
-            //cmd.Parameters.AddWithValue("@address", textBox4.Text);
+            cmd.Parameters.AddWithValue("@id", Id);
+            cmd.Parameters.AddWithValue("@firstName", user.GetFirstName());
+            cmd.Parameters.AddWithValue("@lastName", user.GetLastName());
+            cmd.Parameters.AddWithValue("@email", user.GetEmail());
+            cmd.Parameters.AddWithValue("@password", user.GetPassword());
+            cmd.Parameters.AddWithValue("@accesslevel", 1);
 
-            throw new NotImplementedException();
+            dbCon.ExecuteSqlCommand(cmd);
+
         }
 
         void IRepository<User>.Delete(User entity, DatabaseConnection dbCon)

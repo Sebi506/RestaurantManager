@@ -16,5 +16,10 @@ namespace RestaurantManager.Forms
         {
             InitializeComponent();
         }
+
+        private void ReservationsForm_Load(object sender, EventArgs e)
+        {
+             
+        }
     }
 }

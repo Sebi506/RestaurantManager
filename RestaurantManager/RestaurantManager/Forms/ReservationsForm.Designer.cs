@@ -122,6 +122,7 @@
             this.Controls.Add(this.reserveButton);
             this.Name = "ReservationsForm";
             this.Text = "ReservationsForm";
+            this.Load += new System.EventHandler(this.ReservationsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -9,6 +9,7 @@ namespace RestaurantManager
 {
     public  class User
     {
+        Guid id;
         string FirstName { get; set; }
         string LastName;
         string Email;
@@ -19,12 +20,14 @@ namespace RestaurantManager
         
         }
 
+        public Guid GetId() { return id; }
         public string GetFirstName() { return FirstName; }
         public string GetLastName() { return LastName; } 
         public string GetEmail() { return Email; } 
         public string GetPassword() { return Password;}
         public int GetAccessLevel() { return AccessLevel;}
 
+        public void SetId(Guid id) { this.id = id;}
         public void SetFirstName(string firstName) {  FirstName = firstName; }
         public void SetLastName(string lastName) {  LastName = lastName; }
         public void SetEmail(string email) {  Email = email; }  

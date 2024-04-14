@@ -9,3 +9,5 @@ D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\bin\Debug\Resta
 D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\bin\Debug\RestaurantManager.pdb
 D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.exe
 D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.pdb
+D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.Forms.ManagerForm.resources
+D:\Sandbox\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.Forms.ReservationsForm.resources

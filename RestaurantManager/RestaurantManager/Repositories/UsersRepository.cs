@@ -45,5 +45,47 @@ namespace RestaurantManager.Repositories
         {
             return null;
         }
+
+        public User GetUserByEmail(string email, DatabaseConnection dbCon)
+        {
+            User user = new User();
+
+            SqlCommand cmd = new SqlCommand("select * from  Users where Users.email = @email ");
+            Guid Id = Guid.NewGuid();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@email", email);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                user.SetId ((Guid)reader["id_user"]);
+                user.SetFirstName((string)reader["firstName"]);
+                user.SetLastName((string)reader["lastName"]);
+                user.SetEmail((string)reader["email"]);
+                user.SetPassword((string)reader["userPassword"]);
+                user.SetAccessLevel((int)reader["accessLevel"]);
+
+            }
+
+            return user;
+        }
+
+        public bool VerifyUserCredentials(string email,string password, DatabaseConnection dbCon)
+        {
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "select * from  Users where Users.email = @email and Users.userPassword = @password ";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@password", password);
+
+            dbCon.OpenDbCon();
+
+            SqlDataReader reader = dbCon.ExecuteSqlReader(cmd);
+
+            if (reader.Read()) { return true; dbCon.CloseDbCon(); }
+            dbCon.CloseDbCon();
+            return false;
+        }
     }
 }

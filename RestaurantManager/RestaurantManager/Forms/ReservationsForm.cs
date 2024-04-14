@@ -12,14 +12,27 @@ namespace RestaurantManager.Forms
 {
     public partial class ReservationsForm : Form
     {
+        User loggedUser;
         public ReservationsForm()
         {
             InitializeComponent();
         }
 
+        public ReservationsForm(User user)
+        {
+            InitializeComponent();
+
+            loggedUser = user;
+        }
+
         private void ReservationsForm_Load(object sender, EventArgs e)
         {
              
+        }
+
+        private void reserveButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

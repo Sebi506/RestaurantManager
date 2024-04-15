@@ -15,17 +15,38 @@ namespace RestaurantManager.Repositories
     {
         void IRepository<Table>.Add(Table entity, DatabaseConnection dbCon)
         {
-            throw new NotImplementedException();
+
+            SqlCommand cmd = new SqlCommand("insert into Table values(@id_table,@id_restaurant,@id_server,@tableName,@tableCapacity,@tableState) ");
+            Guid Id = Guid.NewGuid();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id_table", Id);
+            cmd.Parameters.AddWithValue("@id_restaurant", entity.GetIdRestaurant());
+            cmd.Parameters.AddWithValue("@id_server", entity.GetIdServer());
+            cmd.Parameters.AddWithValue("@tableName", entity.GetTableName());
+            cmd.Parameters.AddWithValue("@tableCapacity", entity.GetTableCapacity());
+            cmd.Parameters.AddWithValue("@tableState", 1);
+
+            dbCon.ExecuteSqlCommand(cmd);
         }
 
         void IRepository<Table>.Delete(Table entity, DatabaseConnection dbCon)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("delete from RestaurantTable where id_table=@id");
+            Guid Id = Guid.NewGuid();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", entity.GetIdTable());
+            dbCon.ExecuteSqlCommand(cmd);
         }
 
         void IRepository<Table>.Update(Table entity, DatabaseConnection dbCon)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("update RestaurantTable set capacity =@Capacity where id_table=@id");
+            Guid Id = Guid.NewGuid();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Capacity", entity.GetTableCapacity());
+            cmd.Parameters.AddWithValue("@id", entity.GetIdTable());
+
+            dbCon.ExecuteSqlCommand(cmd);
         }
 
         Table IRepository<Table>.Get(Guid id, DatabaseConnection dbCon)

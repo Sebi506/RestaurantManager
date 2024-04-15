@@ -34,8 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.modifyTableStateButton = new System.Windows.Forms.Button();
             this.SelectStateLabel = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.stateDropDown = new System.Windows.Forms.ComboBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // reserveButton
@@ -50,12 +50,13 @@
             // 
             // takeTableButton
             // 
-            this.takeTableButton.Location = new System.Drawing.Point(103, 290);
+            this.takeTableButton.Location = new System.Drawing.Point(103, 286);
             this.takeTableButton.Name = "takeTableButton";
             this.takeTableButton.Size = new System.Drawing.Size(87, 23);
             this.takeTableButton.TabIndex = 4;
             this.takeTableButton.Text = "Take table";
             this.takeTableButton.UseVisualStyleBackColor = true;
+            this.takeTableButton.Click += new System.EventHandler(this.takeTableButton_Click);
             // 
             // textBox2
             // 
@@ -69,52 +70,53 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(37, 212);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Id Table";
+            this.label2.Text = "Table name";
             // 
             // modifyTableStateButton
             // 
-            this.modifyTableStateButton.Location = new System.Drawing.Point(103, 340);
+            this.modifyTableStateButton.Location = new System.Drawing.Point(110, 366);
             this.modifyTableStateButton.Name = "modifyTableStateButton";
             this.modifyTableStateButton.Size = new System.Drawing.Size(102, 23);
             this.modifyTableStateButton.TabIndex = 7;
             this.modifyTableStateButton.Text = "Modify table state";
             this.modifyTableStateButton.UseVisualStyleBackColor = true;
+            this.modifyTableStateButton.Click += new System.EventHandler(this.modifyTableStateButton_Click);
             // 
             // SelectStateLabel
             // 
             this.SelectStateLabel.AutoSize = true;
-            this.SelectStateLabel.Location = new System.Drawing.Point(226, 345);
+            this.SelectStateLabel.Location = new System.Drawing.Point(34, 342);
             this.SelectStateLabel.Name = "SelectStateLabel";
             this.SelectStateLabel.Size = new System.Drawing.Size(63, 13);
             this.SelectStateLabel.TabIndex = 8;
             this.SelectStateLabel.Text = "Select state";
             // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(37, 32);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(322, 157);
-            this.listView1.TabIndex = 9;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // stateDropDown
             // 
             this.stateDropDown.FormattingEnabled = true;
-            this.stateDropDown.Location = new System.Drawing.Point(295, 342);
+            this.stateDropDown.Location = new System.Drawing.Point(103, 339);
             this.stateDropDown.Name = "stateDropDown";
             this.stateDropDown.Size = new System.Drawing.Size(121, 21);
             this.stateDropDown.TabIndex = 10;
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(40, 34);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(304, 159);
+            this.listView1.TabIndex = 11;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // ReservationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 549);
-            this.Controls.Add(this.stateDropDown);
+            this.ClientSize = new System.Drawing.Size(374, 549);
             this.Controls.Add(this.listView1);
+            this.Controls.Add(this.stateDropDown);
             this.Controls.Add(this.SelectStateLabel);
             this.Controls.Add(this.modifyTableStateButton);
             this.Controls.Add(this.label2);
@@ -137,7 +139,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button modifyTableStateButton;
         private System.Windows.Forms.Label SelectStateLabel;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ComboBox stateDropDown;
+        private System.Windows.Forms.ListView listView1;
     }
 }

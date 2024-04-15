@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantManager.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
@@ -16,8 +17,9 @@ namespace RestaurantManager
         string Password;
         int AccessLevel;
 
+        UsersRepository usersRepository;
         public User() { 
-        
+            usersRepository = new UsersRepository();
         }
 
         public Guid GetId() { return id; }

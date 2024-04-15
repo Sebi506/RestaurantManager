@@ -41,22 +41,15 @@ namespace RestaurantManager.Connection
         public void ExecuteSqlCommand(SqlCommand cmd)
         {
 
-            connection.Open();
-
             cmd.ExecuteNonQuery();
 
-            connection.Close();
         }
 
         public void ExecuteSqlCommand(string query)
         {
             SqlCommand cmd = new SqlCommand(query, connection);
 
-            connection.Open();
-
             cmd.ExecuteNonQuery();
-
-            connection.Close();
         }
 
         public SqlDataReader ExecuteSqlReader(SqlCommand cmd)
@@ -74,10 +67,10 @@ namespace RestaurantManager.Connection
 
         public SqlDataReader ExecuteSqlReader(string query)
         {
+
             SqlCommand cmd = new SqlCommand(query, connection);
 
             SqlDataReader reader = cmd.ExecuteReader();
-
 
             return reader;
         }

@@ -11,7 +11,18 @@ namespace RestaurantManager
 
         public Admin() { }
 
-        public void ModifyAccessLevel(User user, int accesslevel)
+        public Admin(User user)
+        {
+            this.SetId(user.GetId());
+            this.SetFirstName(user.GetFirstName());
+            this.SetLastName(user.GetLastName());
+            this.SetEmail(user.GetEmail());
+            this.SetPassword(user.GetPassword());
+            this.SetAccessLevel(user.GetAccessLevel());
+
+        }
+
+        public void ModifyAccessLevel(string email, int accesslevel)
         {
         
             //find user in db, update accesslevel

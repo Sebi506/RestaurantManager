@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantManager.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,10 +19,15 @@ namespace RestaurantManager
             this.SetLastName(user.GetLastName());
             this.SetEmail(user.GetEmail());
             this.SetPassword(user.GetPassword());
-            this.SetAccessLevel(user.GetAccessLevel());
+            //this.SetAccessLevel(user.GetAccessLevel());
 
         }
-
+        /*
+        public void SetAccessLevel(int accessLevel,User user)
+        { 
+            UsersRepository usersRepository = new UsersRepository();
+        }*/
+   
         public void ModifyAccessLevel(string email, int accesslevel)
         {
         

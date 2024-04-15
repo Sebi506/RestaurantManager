@@ -85,7 +85,9 @@ namespace RestaurantManager
             tempTable = tables.Find(table => table.GetTableName() == TableName);
 
             if (tempTable.GetState() != 1)
+            {
                 tempTable.SetIdServer(user.GetId());
+             }
         }
 
     }

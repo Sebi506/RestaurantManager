@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Classes\Admin.cs" />
     <Compile Include="Connection\DatabaseConnection.cs" />
+    <Compile Include="DefinesClass.cs" />
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

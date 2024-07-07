@@ -64,7 +64,7 @@ namespace RestaurantManager.Connection
 
             return reader;
         }
-
+        
         public SqlDataReader ExecuteSqlReader(string query)
         {
 

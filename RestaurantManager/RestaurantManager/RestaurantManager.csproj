@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Admin.cs" />
+    <Compile Include="Classes\Subject.cs" />
     <Compile Include="Connection\DatabaseConnection.cs" />
     <Compile Include="DefinesClass.cs" />
     <Compile Include="Forms\Form1.cs">
@@ -73,6 +74,7 @@
     <Compile Include="Forms\ReservationsForm.Designer.cs">
       <DependentUpon>ReservationsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IObserver.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Classes\Manager.cs" />
     <Compile Include="Program.cs" />

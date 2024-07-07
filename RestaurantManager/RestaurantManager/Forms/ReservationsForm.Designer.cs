@@ -40,7 +40,7 @@
             // 
             // reserveButton
             // 
-            this.reserveButton.Location = new System.Drawing.Point(103, 246);
+            this.reserveButton.Location = new System.Drawing.Point(110, 246);
             this.reserveButton.Name = "reserveButton";
             this.reserveButton.Size = new System.Drawing.Size(87, 23);
             this.reserveButton.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             // takeTableButton
             // 
-            this.takeTableButton.Location = new System.Drawing.Point(103, 286);
+            this.takeTableButton.Location = new System.Drawing.Point(110, 286);
             this.takeTableButton.Name = "takeTableButton";
             this.takeTableButton.Size = new System.Drawing.Size(87, 23);
             this.takeTableButton.TabIndex = 4;
@@ -60,7 +60,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(103, 209);
+            this.textBox2.Location = new System.Drawing.Point(106, 209);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(87, 20);
             this.textBox2.TabIndex = 5;
@@ -76,7 +76,7 @@
             // 
             // modifyTableStateButton
             // 
-            this.modifyTableStateButton.Location = new System.Drawing.Point(110, 366);
+            this.modifyTableStateButton.Location = new System.Drawing.Point(110, 376);
             this.modifyTableStateButton.Name = "modifyTableStateButton";
             this.modifyTableStateButton.Size = new System.Drawing.Size(102, 23);
             this.modifyTableStateButton.TabIndex = 7;
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 549);
+            this.ClientSize = new System.Drawing.Size(374, 453);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.stateDropDown);
             this.Controls.Add(this.SelectStateLabel);

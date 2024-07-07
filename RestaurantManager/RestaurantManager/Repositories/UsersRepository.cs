@@ -31,14 +31,24 @@ namespace RestaurantManager.Repositories
 
         }
 
-        void IRepository<User>.Delete(User entity, DatabaseConnection dbCon)
+        void IRepository<User>.Delete(User user, DatabaseConnection dbCon)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("delete from Users where email=@email");
+            Guid Id = Guid.NewGuid();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@email", user.GetEmail());
+            dbCon.ExecuteSqlCommand(cmd);
         }
 
-        void IRepository<User>.Update(User entity, DatabaseConnection dbCon)
+        void IRepository<User>.Update(User user, DatabaseConnection dbCon)
         {
-            throw new NotImplementedException();
+            SqlCommand cmd = new SqlCommand("update Users set password =@Password where email=@email");
+            Guid Id = Guid.NewGuid();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@email", user.GetEmail());
+            cmd.Parameters.AddWithValue("@password", user.GetPassword());
+
+            dbCon.ExecuteSqlCommand(cmd);
         }
 
         User IRepository<User>.Get(Guid id, DatabaseConnection dbCon)

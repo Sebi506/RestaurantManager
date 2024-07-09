@@ -1,4 +1,5 @@
-﻿using RestaurantManager.Connection;
+﻿using RestaurantManager.Classes;
+using RestaurantManager.Connection;
 using RestaurantManager.Repositories;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantManager
 {
-    internal class Restaurant
+    internal class Restaurant : Subject
     {
         Guid idRestaurant;
         Guid idOwner;
@@ -71,10 +72,12 @@ namespace RestaurantManager
             {
                 if (tempTable.GetState() == 1)
                     tempTable.SetState(state);
+                NotifyAll(this, EventArgs.Empty, TableName);
             }
             if (accessLevel >= 3)
             {
                     tempTable.SetState(state);
+                    NotifyAll(this, EventArgs.Empty, TableName);
             }
 
         }

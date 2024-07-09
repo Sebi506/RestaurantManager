@@ -8,10 +8,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RestaurantManager.Classes;
 
 namespace RestaurantManager.Repositories
 {
-    internal class TableRepository : IRepository<Table>
+    internal class TableRepository : IRepository<Table> 
     {
         void IRepository<Table>.Add(Table entity, DatabaseConnection dbCon)
         {

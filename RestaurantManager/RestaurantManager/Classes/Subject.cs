@@ -22,13 +22,13 @@ namespace RestaurantManager.Classes
             observers.Remove(observer);
         }
 
-        protected void NotifyAll(object sender, EventArgs e)
+        protected void NotifyAll(object sender, EventArgs e,string tableName)
         {
             foreach (var observer in observers)
             {
                 observer.OnDataChanged(sender, e);
             }
-            ShowNotification("Baza de date a fost actualizata!");
+            ShowNotification(tableName + "a fost rezervata!");
         }
         protected void ShowNotification(string message)
         {

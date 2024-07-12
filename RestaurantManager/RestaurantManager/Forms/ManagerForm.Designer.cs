@@ -34,20 +34,24 @@
             this.addServerButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.serverEmailTB = new System.Windows.Forms.TextBox();
-            this.updateRestaurantDetailsButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.restaurantStateButton = new System.Windows.Forms.Button();
-            this.addTableButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tableNameTB = new System.Windows.Forms.TextBox();
+            this.capacityTB = new System.Windows.Forms.TextBox();
             this.removeTableButton = new System.Windows.Forms.Button();
             this.updateTableButton = new System.Windows.Forms.Button();
             this.removeServerButton = new System.Windows.Forms.Button();
+            this.addTableButton = new System.Windows.Forms.Button();
+            this.vipTableButton = new System.Windows.Forms.Button();
+            this.privateTableButton = new System.Windows.Forms.Button();
+            this.tDetailsTB = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // setOwnerButton
@@ -101,15 +105,6 @@
             this.serverEmailTB.Size = new System.Drawing.Size(153, 20);
             this.serverEmailTB.TabIndex = 5;
             // 
-            // updateRestaurantDetailsButton
-            // 
-            this.updateRestaurantDetailsButton.Location = new System.Drawing.Point(42, 258);
-            this.updateRestaurantDetailsButton.Name = "updateRestaurantDetailsButton";
-            this.updateRestaurantDetailsButton.Size = new System.Drawing.Size(126, 23);
-            this.updateRestaurantDetailsButton.TabIndex = 6;
-            this.updateRestaurantDetailsButton.Text = "Update details";
-            this.updateRestaurantDetailsButton.UseVisualStyleBackColor = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -144,21 +139,12 @@
             // 
             // restaurantStateButton
             // 
-            this.restaurantStateButton.Location = new System.Drawing.Point(42, 316);
+            this.restaurantStateButton.Location = new System.Drawing.Point(42, 263);
             this.restaurantStateButton.Name = "restaurantStateButton";
             this.restaurantStateButton.Size = new System.Drawing.Size(126, 23);
             this.restaurantStateButton.TabIndex = 12;
             this.restaurantStateButton.Text = "Open restaurant";
             this.restaurantStateButton.UseVisualStyleBackColor = true;
-            // 
-            // addTableButton
-            // 
-            this.addTableButton.Location = new System.Drawing.Point(32, 456);
-            this.addTableButton.Name = "addTableButton";
-            this.addTableButton.Size = new System.Drawing.Size(85, 23);
-            this.addTableButton.TabIndex = 13;
-            this.addTableButton.Text = "Add table";
-            this.addTableButton.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -178,19 +164,20 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Capacity";
             // 
-            // textBox3
+            // tableNameTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 385);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(198, 20);
-            this.textBox3.TabIndex = 17;
+            this.tableNameTB.Location = new System.Drawing.Point(120, 385);
+            this.tableNameTB.Name = "tableNameTB";
+            this.tableNameTB.Size = new System.Drawing.Size(198, 20);
+            this.tableNameTB.TabIndex = 17;
             // 
-            // textBox4
+            // capacityTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(120, 418);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(48, 20);
-            this.textBox4.TabIndex = 18;
+            this.capacityTB.Location = new System.Drawing.Point(120, 418);
+            this.capacityTB.Name = "capacityTB";
+            this.capacityTB.Size = new System.Drawing.Size(48, 20);
+            this.capacityTB.TabIndex = 18;
+            this.capacityTB.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // removeTableButton
             // 
@@ -219,16 +206,77 @@
             this.removeServerButton.Text = "Remove Server";
             this.removeServerButton.UseVisualStyleBackColor = true;
             // 
+            // addTableButton
+            // 
+            this.addTableButton.Location = new System.Drawing.Point(32, 456);
+            this.addTableButton.Name = "addTableButton";
+            this.addTableButton.Size = new System.Drawing.Size(85, 23);
+            this.addTableButton.TabIndex = 13;
+            this.addTableButton.Text = "Add table";
+            this.addTableButton.UseVisualStyleBackColor = true;
+            this.addTableButton.Click += new System.EventHandler(this.addTableButton_Click);
+            // 
+            // vipTableButton
+            // 
+            this.vipTableButton.Location = new System.Drawing.Point(32, 485);
+            this.vipTableButton.Name = "vipTableButton";
+            this.vipTableButton.Size = new System.Drawing.Size(85, 23);
+            this.vipTableButton.TabIndex = 22;
+            this.vipTableButton.Text = "Vip table";
+            this.vipTableButton.UseVisualStyleBackColor = true;
+            this.vipTableButton.Click += new System.EventHandler(this.vipTableButton_Click);
+            // 
+            // privateTableButton
+            // 
+            this.privateTableButton.Location = new System.Drawing.Point(139, 485);
+            this.privateTableButton.Name = "privateTableButton";
+            this.privateTableButton.Size = new System.Drawing.Size(85, 23);
+            this.privateTableButton.TabIndex = 23;
+            this.privateTableButton.Text = "Private table";
+            this.privateTableButton.UseVisualStyleBackColor = true;
+            this.privateTableButton.Click += new System.EventHandler(this.privateTableButton_Click);
+            // 
+            // tDetailsTB
+            // 
+            this.tDetailsTB.Location = new System.Drawing.Point(139, 520);
+            this.tDetailsTB.Name = "tDetailsTB";
+            this.tDetailsTB.Size = new System.Drawing.Size(179, 20);
+            this.tDetailsTB.TabIndex = 25;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(39, 527);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Table details";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(267, 551);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 23);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 552);
+            this.ClientSize = new System.Drawing.Size(364, 586);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tDetailsTB);
+            this.Controls.Add(this.privateTableButton);
+            this.Controls.Add(this.vipTableButton);
             this.Controls.Add(this.removeServerButton);
             this.Controls.Add(this.updateTableButton);
             this.Controls.Add(this.removeTableButton);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.capacityTB);
+            this.Controls.Add(this.tableNameTB);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.addTableButton);
@@ -237,7 +285,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.updateRestaurantDetailsButton);
             this.Controls.Add(this.serverEmailTB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.addServerButton);
@@ -246,6 +293,7 @@
             this.Controls.Add(this.setOwnerButton);
             this.Name = "ManagerForm";
             this.Text = "ManagerForm";
+            this.Load += new System.EventHandler(this.ManagerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,19 +307,23 @@
         private System.Windows.Forms.Button addServerButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox serverEmailTB;
-        private System.Windows.Forms.Button updateRestaurantDetailsButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button restaurantStateButton;
-        private System.Windows.Forms.Button addTableButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tableNameTB;
+        private System.Windows.Forms.TextBox capacityTB;
         private System.Windows.Forms.Button removeTableButton;
         private System.Windows.Forms.Button updateTableButton;
         private System.Windows.Forms.Button removeServerButton;
+        private System.Windows.Forms.Button addTableButton;
+        private System.Windows.Forms.Button vipTableButton;
+        private System.Windows.Forms.Button privateTableButton;
+        private System.Windows.Forms.TextBox tDetailsTB;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
     }
 }

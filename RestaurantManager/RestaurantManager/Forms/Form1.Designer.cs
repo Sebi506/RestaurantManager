@@ -53,7 +53,7 @@
             this.manageRestaurantButton.TabIndex = 1;
             this.manageRestaurantButton.Text = "Restaurant Manager";
             this.manageRestaurantButton.UseVisualStyleBackColor = true;
-            this.manageRestaurantButton.Visible = false;
+            this.manageRestaurantButton.Click += new System.EventHandler(this.manageRestaurantButton_Click);
             // 
             // disconnectButton
             // 

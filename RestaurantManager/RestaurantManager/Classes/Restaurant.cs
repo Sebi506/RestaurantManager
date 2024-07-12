@@ -61,6 +61,7 @@ namespace RestaurantManager
 
         public void AddTable(Table table) {
             tables.Add(table);
+            NotifyAll(this, EventArgs.Empty, table.GetTableName());
         }
 
         public void UpdateTableState(int state,string TableName,int accessLevel) {

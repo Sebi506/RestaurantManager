@@ -28,7 +28,7 @@ namespace RestaurantManager.Classes
             {
                 observer.OnDataChanged(sender, e);
             }
-            ShowNotification(tableName + "a fost rezervata!");
+            ShowNotification(tableName + " a fost modificata!");
         }
         protected void ShowNotification(string message)
         {

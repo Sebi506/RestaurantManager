@@ -24,12 +24,13 @@ namespace RestaurantManager
         public Form1()
         {
             InitializeComponent();
+            manageRestaurantButton.Visible = false;
         }
         public Form1(User user)
         {
             InitializeComponent();
             loggedUser = user;
-
+            manageRestaurantButton.Visible = false;
             dbCon = DatabaseConnection.Instance;
 
             UsersRepository usersRepository = new UsersRepository();
@@ -40,6 +41,10 @@ namespace RestaurantManager
             {
                 label1.Text = "Login successfull";
                 loggedUser = usersRepository.GetUserByEmail(user.GetEmail(), dbCon);
+                if (loggedUser.GetAccessLevel() == 4)
+                {
+                    manageRestaurantButton.Visible = true;
+                }
             }
             else
             {
@@ -69,6 +74,14 @@ namespace RestaurantManager
             this.Hide();
             Form loginForm = new ReservationsForm(loggedUser,dbCon) ;
             loginForm.ShowDialog();
+        }
+
+        private void manageRestaurantButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form managerForm = new ManagerForm(loggedUser, dbCon);
+            managerForm.ShowDialog();
+
         }
     }
 }

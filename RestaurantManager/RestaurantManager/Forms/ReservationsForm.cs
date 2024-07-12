@@ -147,6 +147,12 @@ namespace RestaurantManager.Forms
 
             FillListView();
         }
-        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form form = new Form1(loggedUser);
+            form.ShowDialog();
+        }
     }
 }

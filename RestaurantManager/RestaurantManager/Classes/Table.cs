@@ -16,6 +16,9 @@ namespace RestaurantManager
         string tableName;
         int state;
         int tableCapacity;
+        bool isPrivateTable;
+        bool isVipTable;
+        string details;
        // TableRepository repository;
 
         public Table()
@@ -33,6 +36,9 @@ namespace RestaurantManager
             this.tableName = tableName;
             this.state = state;
             this.tableCapacity = tableCapacity;
+            this.isPrivateTable = false;
+            this.isVipTable = false;
+            this.details = "";
         }
 
         public Guid GetIdTable() { return idTable; }
@@ -48,6 +54,11 @@ namespace RestaurantManager
         public void SetTableName(string tableName) { this.tableName = tableName;}
         public void SetTableCapacity(int tableCapacity) {  this.tableCapacity = tableCapacity;}
         public void SetState(int state) {  this.state = state;}
+        public void IsPrivateTable(bool state) { this.isPrivateTable = state; }
+        public void IsVipTable(bool state) { this.isVipTable = state; }
+        public void SetDetails(string  details) { this.details = details;}
+
+        public string GetDetails() { return details;}
 
     }
 }

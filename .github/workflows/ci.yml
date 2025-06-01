@@ -24,10 +24,10 @@ jobs:
         uses: NuGet/setup-nuget@v1
 
       - name: Restore NuGet packages
-        run: nuget restore RestaurantManager.sln
+        run: nuget restore RestaurantManager\RestaurantManager.sln
 
       - name: Build solution
-        run: msbuild RestaurantManager.sln /p:Configuration=Release
+        run: msbuild RestaurantManager\RestaurantManager.sln /p:Configuration=Release
 
       - name: Run unit tests
         run: |

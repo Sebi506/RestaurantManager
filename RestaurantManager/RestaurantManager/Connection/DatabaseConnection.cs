@@ -22,7 +22,7 @@ namespace RestaurantManager.Connection
         {
             //this.connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True;User Instance=True");
             //this.connection = new SqlConnection(@"Data Source=DESKTOP-KH2IB0O\SQLEXPRESS;Initial Catalog=RestaurantManagerDB;Integrated Security=True");
-            this.connection = new SqlConnection("Data Source=DESKTOP-KH2IB0O\\SQLEXPRESS;Initial Catalog=RestaurantManagerDB;Integrated Security=True");
+            this.connection = new SqlConnection("Data Source=DESKTOP-42V5QOA\\SQLEXPRESS;Initial Catalog=RestaurantManagerDB;Integrated Security=True");
 
         }
 

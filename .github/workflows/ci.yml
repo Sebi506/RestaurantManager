@@ -1,0 +1,35 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ "main", "sandbox/CiSetup" ]
+  pull_request:
+    branches: [ "main", "sandbox/CiSetup"]
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.1
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1
+
+      - name: Restore NuGet packages
+        run: nuget restore RestaurantManager\RestaurantManager.sln
+
+      - name: Build solution
+        run: msbuild RestaurantManager\RestaurantManager.sln /p:Configuration=Release
+
+      - name: Run unit tests
+        run: |
+          "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\TestPlatform\vstest.console.exe"
+          "RestaurantManagerUniTestProject\bin\Debug\RestaurantManagerUniTestProject.dll"

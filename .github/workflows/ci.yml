@@ -26,7 +26,7 @@ jobs:
       - name: Restore NuGet packages
         run: nuget restore RestaurantManager\RestaurantManager.sln
 
-      - name : Setup VSTest console
+      - name: Setup VSTest console
         uses: darenm/Setup-VSTest@v1
 
       - name: Build solution

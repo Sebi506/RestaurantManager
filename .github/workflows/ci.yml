@@ -2,9 +2,9 @@ name: Continuous Integration
 
 on:
   push:
-    branches: [ "main", "sandbox/CiSetup" ]
+    branches: [ "main", "sandbox/CiSetup", "sandbox/Unittest" ]
   pull_request:
-    branches: [ "main", "sandbox/CiSetup"]
+    branches: [ "main", "sandbox/CiSetup", "sandbox/Unittest" ]
 
 jobs:
   build-and-test:

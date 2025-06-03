@@ -35,5 +35,5 @@ jobs:
       - name: Deploy - zip build outputAdd commentMore actions
         run: |
           mkdir deploy
-          xcopy /s /y Endangered_animals\bin\Release deploy\
+          xcopy /s /y RestaurantManager\RestaurantManager\bin\Release deploy\
           powershell Compress-Archive -Path deploy\* -DestinationPath deployed_build.zip

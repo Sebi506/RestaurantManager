@@ -34,7 +34,7 @@ jobs:
 
       - name: Run unit tests
         run: |
-        "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\TestPlatform\vstest.console.exe" RestaurantManager\RestaurantManagerUniTestProject\bin\Debug\RestaurantManagerUniTestProject.dll
+        "C:\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\Extensions\\TestPlatform\vstest.console.exe" RestaurantManager\RestaurantManagerUniTestProject\bin\Debug\RestaurantManagerUniTestProject.dll
         
       - name: Deploy 
         run: |

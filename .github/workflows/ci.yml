@@ -31,3 +31,9 @@ jobs:
 
       - name: Run unit tests
         run: dotnet test RestaurantManager\RestaurantManagerUniTestProject\RestaurantManagerUniTestProject.csproj --configuration Release --verbosity detailed
+        
+      - name: Deploy - zip build outputAdd commentMore actions
+        run: |
+          mkdir deploy
+          xcopy /s /y Endangered_animals\bin\Release deploy\
+          powershell Compress-Archive -Path deploy\* -DestinationPath deployed_build.zip

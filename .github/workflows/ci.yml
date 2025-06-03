@@ -22,15 +22,19 @@ jobs:
 
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1
-
+        
       - name: Restore NuGet packages
         run: nuget restore RestaurantManager\RestaurantManager.sln
+
+      - name : Setup VSTest console
+        uses: darenm/Setup-VSTest@v1
 
       - name: Build solution
         run: msbuild RestaurantManager\RestaurantManager.sln /p:Configuration=Release
 
       - name: Run unit tests
-        run: dotnet test RestaurantManager\RestaurantManagerUniTestProject\RestaurantManagerUniTestProject.csproj --configuration Release --verbosity detailed
+        run: |
+         vtest.console.exe RestaurantManager\RestaurantManagerUniTestProject\bin\Debug\RestaurantManagerUniTestProject.dll 
         
       - name: Deploy - zip build outputAdd commentMore actions
         run: |

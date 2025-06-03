@@ -37,7 +37,7 @@ jobs:
         "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\TestPlatform\vstest.console.exe"
          vtest.console.exe RestaurantManager\RestaurantManagerUniTestProject\bin\Debug\RestaurantManagerUniTestProject.dll 
         
-      - name: Deploy - zip build outputAdd commentMore actions
+      - name: Deploy 
         run: |
           mkdir deploy
           xcopy /s /y RestaurantManager\RestaurantManager\bin\Release deploy\

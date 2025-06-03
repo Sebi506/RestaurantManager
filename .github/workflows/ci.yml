@@ -30,4 +30,4 @@ jobs:
         run: msbuild RestaurantManager\RestaurantManager.sln /p:Configuration=Release
 
       - name: Run unit tests
-        run: dotnet test RestaurantManagerUniTestProject\RestaurantManagerUniTestProject.csproj --configuration Release
+        run: dotnet test RestaurantManager\RestaurantManagerUniTestProject\RestaurantManagerUniTestProject.csproj --configuration Release

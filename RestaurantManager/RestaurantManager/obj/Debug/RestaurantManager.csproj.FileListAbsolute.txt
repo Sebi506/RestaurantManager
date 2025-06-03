@@ -24,3 +24,16 @@ C:\Users\seby5\OneDrive\Desktop\RestaurantMananger\RestaurantManager\RestaurantM
 C:\Users\seby5\OneDrive\Desktop\RestaurantMananger\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.csproj.CoreCompileInputs.cache
 C:\Users\seby5\OneDrive\Desktop\RestaurantMananger\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.exe
 C:\Users\seby5\OneDrive\Desktop\RestaurantMananger\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.pdb
+C:\Users\seby5\Desktop\RestaurantManager\RestaurantManager\RestaurantManager\RestaurantManager\bin\Debug\RestaurantManager.exe.config
+C:\Users\seby5\Desktop\RestaurantManager\RestaurantManager\RestaurantManager\RestaurantManager\bin\Debug\RestaurantManager.exe
+C:\Users\seby5\Desktop\RestaurantManager\RestaurantManager\RestaurantManager\RestaurantManager\bin\Debug\RestaurantManager.pdb
+C:\Users\seby5\Desktop\RestaurantManager\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.csproj.AssemblyReference.cache
+C:\Users\seby5\Desktop\RestaurantManager\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.Form1.resources
+C:\Users\seby5\Desktop\RestaurantManager\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.Forms.LoginForm.resources
+C:\Users\seby5\Desktop\RestaurantManager\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.Forms.ManagerForm.resources
+C:\Users\seby5\Desktop\RestaurantManager\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.Forms.ReservationsForm.resources
+C:\Users\seby5\Desktop\RestaurantManager\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.Properties.Resources.resources
+C:\Users\seby5\Desktop\RestaurantManager\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.csproj.GenerateResource.cache
+C:\Users\seby5\Desktop\RestaurantManager\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.csproj.CoreCompileInputs.cache
+C:\Users\seby5\Desktop\RestaurantManager\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.exe
+C:\Users\seby5\Desktop\RestaurantManager\RestaurantManager\RestaurantManager\RestaurantManager\obj\Debug\RestaurantManager.pdb

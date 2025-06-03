@@ -2,9 +2,9 @@ name: Continuous Integration
 
 on:
   push:
-    branches: [ "main", "sandbox/CiSetup" ]
+    branches: [ "main", "sandbox/CiSetup", "sandbox/Unittest" ]
   pull_request:
-    branches: [ "main", "sandbox/CiSetup"]
+    branches: [ "main", "sandbox/CiSetup", "sandbox/Unittest" ]
 
 jobs:
   build-and-test:
@@ -22,7 +22,7 @@ jobs:
 
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1
-
+        
       - name: Restore NuGet packages
         run: nuget restore RestaurantManager\RestaurantManager.sln
 
@@ -33,3 +33,9 @@ jobs:
         run: |
           "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\TestPlatform\vstest.console.exe"
           "RestaurantManagerUniTestProject\bin\Debug\RestaurantManagerUniTestProject.dll"
+          
+      - name: Deploy 
+        run: |
+          mkdir deploy
+          xcopy /s /y RestaurantManager\RestaurantManager\bin\Release deploy\
+          powershell Compress-Archive -Path deploy\* -DestinationPath deployed_build.zip
